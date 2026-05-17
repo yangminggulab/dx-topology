@@ -1,33 +1,57 @@
-<!-- Author : Dongsheng Deng & Liam Huang-->
-<!-- Program Email: elegantlatex2e@gmail.com -->
+# dx 的拓扑
 
-[Homepage](https://elegantlatex.org/) | [Github](https://github.com/ElegantLaTeX/ElegantBook) | [CTAN](https://ctan.org/pkg/elegantbook) | [Download](https://github.com/ElegantLaTeX/ElegantBook/releases) | [Wiki](https://github.com/ElegantLaTeX/ElegantBook/wiki) | [Weibo](https://weibo.com/elegantlatex)
+## 序
 
-![License](https://img.shields.io/ctan/l/elegantbook.svg) ![CTAN Version](https://img.shields.io/ctan/v/elegantbook.svg) ![Github Version](https://img.shields.io/github/release/ElegantLaTeX/ElegantBook.svg) ![Repo Size](https://img.shields.io/github/repo-size/ElegantLaTeX/ElegantBook.svg)
+拓扑最容易让人误会的一点，就是它看起来像一门只会不断发明新名词的课。
 
----
+开集、基、邻域、闭包、内部、紧、连通、分离公理、同胚、可数性……刚开始学的时候，常常会有一种很别扭的感觉: 每个词单独拎出来都好像能理解，可一旦放到题里，它们又像散在各处，抓不住真正的主线。  
 
-# ElegantBook 优美的 LaTeX 书籍模板
+我写这本书时，最想做的，就是把这条主线重新拉出来。因为在我看来，拓扑从来不是在堆概念，它真正训练的是一种眼光: 你怎样规定一个空间，怎样在这个规定下谈“开”，怎样在这个“开”的基础上谈连续、连通、紧与同胚，最后又怎样比较两个空间到底是不是同一种结构。
 
-ElegantBook 是为 LaTeX 书籍写作而设计的模板，由 [Dongsheng Deng](https://ddswhu.me/) 和 [Liam Huang](https://liam.page/) 创立，模板创立的初衷是方便我们自己做笔记 :smile:。如果你有其他问题、建议或者报告 bug，可以提交 issues 或者给我们发邮件：elegantlatex2e@gmail.com。QQ 用户交流群：692108391，欢迎加入。
+## 为什么我想这样写这本书
 
-## 重要提示
+因为如果只把拓扑写成定义目录，它会非常容易失去方向感。
 
-**重要提示**：ElegantLaTeX 项目 **不接受** 任何非预授权的提交（pull requests）！
+可一旦你开始追问“这些定义到底都在服务什么”，很多东西就会忽然串起来。比如书里很多地方都在重复做同一件事: 先问哪些集合被当作开集，再问这种规定会带来什么样的空间性质，再问映射会保留哪些性质。这样看下去，基、子空间、积空间、连续映射、同胚、第二可数、Lindelöf、紧性、连通性，其实都不再是互相孤立的章节，而像是一棵树上长出来的不同分枝。
 
-## 致谢
+我很喜欢书里那些很有“做题现场感”的 `dxtips`。像“子空间重要步骤”“连续映射的要点”“构造一个严格单调、连续、双射且逆连续的函数”“同胚需要双射的同时双连续”，这些话不一定最正式，但它们很像真正能把题做开的抓手。拓扑这门课如果完全失去这种抓手，就很容易变成一门“我都听过，但不会下手”的课。
 
-特别感谢 [sikouhjw](https://github.com/sikouhjw) 和 [syvshc](https://github.com/syvshc) 长期以来对于 Github 上 issue 的快速回应，以及各个社区论坛对于 ElegantLaTeX 相关问题的回复。
-特别感谢 ChinaTeX 以及 [LaTeX 工作室](http://www.latexstudio.net/)对于本系列模板的大力宣传与推广。
+## 这本书的气质
 
-如果你喜欢我们的模板，你可以在 Github 上收藏我们的模板。
+这本书带着一种很明显的“从题里长出来”的气质。
 
-## 协议
+它当然有主文档和完整章节，从基础概念一路推到连续映射、连通空间、紧空间、分离性和各种可数性条件；但与此同时，它也把 `作业.tex`、`最后要看的作业.tex`、`期末笔记.tex`、`纯作业期末复习计划.tex` 这些很实战的内容一起保留下来了。  
 
-本模板发布遵循 LaTeX 项目公共许可证 1.3 c 或更高版本。如果是衍生作品，请务必加入协议声明和模板信息（github、CTAN 地址）。
+我反而觉得，这很适合拓扑。因为拓扑的很多理解，往往不是在第一次读定义的时候真正长出来的，而是在反复判断一个集合开不开、一个映射连不连续、一个空间是不是同胚、一个性质会不会被保持时，慢慢磨出来的。
 
-## 衍生作
+也就是说，这本书不只是想告诉你“概念是什么”，它还想陪你建立拓扑直觉。
 
-+ [ElegantBookdown](https://github.com/XiangyunHuang/ElegantBookdown)：[XiangyunHuang](https://github.com/XiangyunHuang) 开发并维护的基于 ElegantBook 的 Bookdown 模板。
-+ [bookdownplus](https://github.com/pzhaonet/bookdownplus)：应网友要求，[pzhaonet](https://github.com/pzhaonet) 在 bookdownplus 收录了 ElegantPaper 模板，并为 Mac 做了字体适配。
-+ [PanBook](https://github.com/annProg/PanBook)：[annProg](https://github.com/annProg) 开发并维护的基于 Markdown 写作的工作流，收录了 ElegantBook 和 ElegantPaper 模板。
+## 这本书想保住的主线
+
+它的主线其实很统一。
+
+前面从集合、拓扑、基、子空间这些基础对象出发，先把语言搭起来；中间进入连续映射、开映射、闭映射、商映射和同胚，开始真正讨论“空间与空间之间怎样比较”；后面再走到连通、紧、分离性和各种可数性条件，把空间内部与外部的结构逐渐织成网。
+
+但如果只把这些当成知识点列表，你还是会低估这门课真正的力量。因为拓扑最重要的不是“记住多少定义”，而是你开始知道什么东西值得被看成同一种，什么东西只是表面长得像，什么性质在映射下会被保留，什么性质一换空间就会失效。
+
+从这个角度看，拓扑很像一门训练“比较能力”的课。它让你不再只盯着对象本身，而是开始关心对象之间的关系、关系背后的结构，以及结构改变之后会发生什么。
+
+## 我想把它写给谁
+
+我想把它写给那种觉得拓扑“每一章都能听懂，合起来却说不清”的人。
+
+如果你现在就在这个阶段，那很正常。拓扑本来就不是一门靠单个定义推进的课，它更像一门需要逐渐在脑子里长出整体地图的课。  
+
+如果你是第一次学，我希望这本书能帮你把地图慢慢画出来。  
+如果你已经学过一遍，那我希望你回来再看这些笔记时，会更明显地感觉到: 那些曾经分散的章节，其实一直都在围绕“空间如何被规定，映射如何保留结构”这件事打转。
+
+## 最后
+
+如果这本书最后能让你在看到一个新空间时，下意识想到的不只是“它有哪些开集”，而是“这样的规定会带来什么后果”；如果它能让你在面对同胚、连续映射、紧性、可数性这些概念时，不再把它们看成彼此孤立的术语，而是看成一整套比较空间的方法；如果它能让你慢慢意识到，拓扑的美不在于它名词多，而在于它能把很多看似不同的问题拉回到同一种结构语言里，那么这本书就已经达到了我最想让它达到的样子。
+
+## 仓库说明
+
+- 主文件是 `main.tex`。
+- 主体章节在 `第一章.tex` 到 `第六章.tex`，另有 `第五章紧空间.tex` 单独展开。
+- 作业与复习材料在 `作业.tex`、`最后要看的作业.tex`、`期末笔记.tex`、`纯作业期末复习计划.tex`。
+- 若需要本地编译，通常运行 `xelatex main.tex` 两次即可。
