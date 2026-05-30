@@ -1,36 +1,96 @@
-# dx's Topology
+# dx 的拓扑
 
-## Preface
+## 序
 
-Topology is easily misunderstood as a course that only invents new words. Open sets, bases, neighborhoods, closure, interior, compactness, connectedness, separation axioms, homeomorphisms, and countability conditions can feel scattered when first encountered.
+拓扑最容易让人误会的一点，就是它看起来像一门只会不断发明新名词的课。
 
-The aim of this book is to pull out the main line: how a space is specified, how openness is defined, how continuity is built from openness, and how connectedness, compactness, and homeomorphism compare spaces.
+开集、基、邻域、闭包、内部、紧、连通、分离公理、同胚、可数性……刚开始学的时候，常常会有一种很别扭的感觉: 每个词单独拎出来都好像能理解，可一旦放到题里，它们又像散在各处，抓不住真正的主线。
 
-## Why This Book Is Written This Way
+我写这本书时，最想做的，就是把这条主线重新拉出来。因为在我看来，拓扑从来不是在堆概念，它真正训练的是一种眼光: 你怎样规定一个空间，怎样在这个规定下谈“开”，怎样在这个“开”的基础上谈连续、连通、紧与同胚，最后又怎样比较两个空间到底是不是同一种结构。
 
-A topology text that is only a directory of definitions quickly loses direction. Once the definitions are connected to their purposes, the subject becomes a single structure.
+## 为什么我想这样写这本书
 
-The recurring action is: decide which sets are open, study what properties this decision creates, and then ask which of those properties maps preserve. Bases, subspaces, product spaces, continuous maps, homeomorphisms, countability, compactness, and connectedness then become branches of the same tree.
+因为如果只把拓扑写成定义目录，它会非常容易失去方向感。
 
-## What This Book Keeps
+可一旦你开始追问“这些定义到底都在服务什么”，很多东西就会忽然串起来。比如书里很多地方都在重复做同一件事: 先问哪些集合被当作开集，再问这种规定会带来什么样的空间性质，再问映射会保留哪些性质。这样看下去，基、子空间、积空间、连续映射、同胚、第二可数、Lindelöf、紧性、连通性，其实都不再是互相孤立的章节，而像是一棵树上长出来的不同分枝。
 
-The notes begin with sets, topologies, bases, and subspaces. They then move to continuous maps, open maps, closed maps, quotient maps, and homeomorphisms. Later chapters develop connectedness, compactness, separation, and countability conditions.
+我很喜欢书里那些很有“做题现场感”的 `dxtips`。像“子空间重要步骤”“连续映射的要点”“构造一个严格单调、连续、双射且逆连续的函数”“同胚需要双射的同时双连续”，这些话不一定最正式，但它们很像真正能把题做开的抓手。拓扑这门课如果完全失去这种抓手，就很容易变成一门“我都听过，但不会下手”的课。
 
-Homework, review plans, and exam notes are kept because topology intuition often forms while repeatedly deciding whether a set is open, a map is continuous, or a space is homeomorphic to another.
+## 这本书的气质
 
-## Intended Readers
+这本书带着一种很明显的“从题里长出来”的气质。
 
-This book is for readers who feel they understand each topology chapter separately but cannot yet see the whole map. It tries to make the map grow gradually.
+它当然有主文档和完整章节，从基础概念一路推到连续映射、连通空间、紧空间、分离性和各种可数性条件；但与此同时，它也把 `作业.tex`、`最后要看的作业.tex`、`期末笔记.tex`、`纯作业期末复习计划.tex` 这些很实战的内容一起保留下来了。
 
-## Overall Roadmap
+我反而觉得，这很适合拓扑。因为拓扑的很多理解，往往不是在第一次读定义的时候真正长出来的，而是在反复判断一个集合开不开、一个映射连不连续、一个空间是不是同胚、一个性质会不会被保持时，慢慢磨出来的。
 
-Following the MIT 18.901 topology description, topology studies geometric properties that do not depend on distance or angle. Its core objects include topological spaces, continuous maps, compactness, and path structure. This tree matches the repository's notes on set foundations, topological spaces, continuous maps, connectedness, compactness, and separation.
+也就是说，这本书不只是想告诉你“概念是什么”，它还想陪你建立拓扑直觉。
 
+## 这本书想保住的主线
+
+它的主线其实很统一。
+
+前面从集合、拓扑、基、子空间这些基础对象出发，先把语言搭起来；中间进入连续映射、开映射、闭映射、商映射和同胚，开始真正讨论“空间与空间之间怎样比较”；后面再走到连通、紧、分离性和各种可数性条件，把空间内部与外部的结构逐渐织成网。
+
+但如果只把这些当成知识点列表，你还是会低估这门课真正的力量。因为拓扑最重要的不是“记住多少定义”，而是你开始知道什么东西值得被看成同一种，什么东西只是表面长得像，什么性质在映射下会被保留，什么性质一换空间就会失效。
+
+从这个角度看，拓扑很像一门训练“比较能力”的课。它让你不再只盯着对象本身，而是开始关心对象之间的关系、关系背后的结构，以及结构改变之后会发生什么。
+
+## 我想把它写给谁
+
+我想把它写给那种觉得拓扑“每一章都能听懂，合起来却说不清”的人。
+
+如果你现在就在这个阶段，那很正常。拓扑本来就不是一门靠单个定义推进的课，它更像一门需要逐渐在脑子里长出整体地图的课。
+
+如果你是第一次学，我希望这本书能帮你把地图慢慢画出来。
+如果你已经学过一遍，那我希望你回来再看这些笔记时，会更明显地感觉到: 那些曾经分散的章节，其实一直都在围绕“空间如何被规定，映射如何保留结构”这件事打转。
+
+## 最后
+
+如果这本书最后能让你在看到一个新空间时，下意识想到的不只是“它有哪些开集”，而是“这样的规定会带来什么后果”；如果它能让你在面对同胚、连续映射、紧性、可数性这些概念时，不再把它们看成彼此孤立的术语，而是看成一整套比较空间的方法；如果它能让你慢慢意识到，拓扑的美不在于它名词多，而在于它能把很多看似不同的问题拉回到同一种结构语言里，那么这本书就已经达到了我最想让它达到的样子。
+
+## 整体规划
+
+参考 MIT 18.901 拓扑课程说明：拓扑学研究不依赖距离和角度的几何性质，核心对象包括拓扑空间、连续映射、紧性和路径结构；下面这棵树对应本仓库的集合基础、拓扑空间、连续映射、连通性、紧性和分离性。
+
+```text
+拓扑 = 在不依赖距离的情况下研究连续和空间结构
+│
+├── 这门课要解决的问题
+│   ├── 没有距离时，怎样说“附近”和“连续”？
+│   │   └── 用开集、邻域、基和子基定义拓扑空间
+│   ├── 怎样判断两个空间本质一样？
+│   │   └── 用连续映射、同胚、开映射和闭映射比较空间结构
+│   └── 哪些性质在连续变形下不变？
+│       └── 用连通性、紧性、分离性等性质描述空间的内在特征
+│
+├── 工具一  集合与基础语言  →  进入抽象空间前的准备
+│   ├── 集合与势        区分有限、可数、不可数
+│   ├── 序与归纳        处理更抽象构造中的次序问题
+│   └── 基础习题        把集合语言变成可用工具
+│
+├── 工具二  拓扑空间  →  用开集定义空间
+│   ├── 基与子基        从少量开集生成整个拓扑
+│   ├── 邻域、闭包、内点、边界  描述点和集合的局部关系
+│   ├── 子空间拓扑      把大空间的结构限制到子集
+│   ├── 积空间          组合多个空间的拓扑结构
+│   └── 可数性          用第一可数、第二可数、可分等控制复杂度
+│
+├── 工具三  连续映射  →  空间之间保持结构的函数
+│   ├── 连续性的等价刻画  用开集、闭集、闭包多角度判断连续
+│   ├── 开映射与闭映射    研究映射怎样搬运开闭结构
+│   └── 同胚映射          判断两个空间是否拓扑等价
+│
+└── 工具四  核心性质  →  连续变形下保留的东西
+    ├── 连通与道路连通    描述空间能否被分成两块
+    ├── 紧性              用有限子覆盖控制无限对象
+    ├── 完备映射与纲集    进一步研究紧性和空间大小
+    └── 分离公理          区分点与点、点与闭集的能力
 ```
 
-## Repository Notes
+## 仓库说明
 
-- The main entry is `main.tex`.
-- The body covers foundational topology, continuous maps, connectedness, compactness, separation, and countability.
-- Homework and review materials are kept separately.
-- For local compilation, running `xelatex main.tex` twice is usually enough.
+- 主文件是 `main.tex`。
+- 主体章节在 `第一章.tex` 到 `第六章.tex`，另有 `第五章紧空间.tex` 单独展开。
+- 作业与复习材料在 `作业.tex`、`最后要看的作业.tex`、`期末笔记.tex`、`纯作业期末复习计划.tex`。
+- 若需要本地编译，通常运行 `xelatex main.tex` 两次即可。
